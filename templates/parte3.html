@@ -1,0 +1,70 @@
+parte 3 <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+  <title>Estud-IA - Plan Listo</title> 
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Configuración de colores -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1E3A8A',    // Azul oscuro
+            secondary: '#3B82F6',  // Azul claro
+            light: '#F3F4F6',      // Gris claro
+            white: '#FFFFFF'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-secondary to-light flex flex-col p-6">
+
+  <!-- Barra superior -->
+  <header class="bg-blue-900/50 text-white p-4 absolute top-0 left-0 w-full">
+    <nav class="flex justify-center items-center">
+      <a href="#" class="text-xl font-bold">Plan de estudio</a>
+    </nav>
+  </header>
+
+  <!-- Espacio para compensar la barra -->
+  <div class="mt-20 flex-grow flex flex-col items-center justify-center">
+
+    <!-- Contenedor principal -->
+    <main class="bg-white/45 rounded-xl shadow-lg backdrop-blur-[6.1px] border border-white/20 p-8 flex flex-col max-w-5xl w-full space-y-8">
+
+      <!-- Título principal -->
+      <h2 class="text-3xl font-extrabold text-primary text-center">¡Tu plan de estudios está listo! 🎉</h2>
+
+
+        <!-- Plan recomendado -->
+        <div class="bg-white/60 p-6 rounded-xl shadow-sm border border-white/30">
+          <h3 class="text-xl font-bold text-primary mb-4">Plan recomendado:</h3>
+          <div id="ia-plan" class="space-y-2 text-gray-700">
+            <p>{{ plan }}</p>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Botón -->
+      <div class="flex justify-center">
+        <button class="bg-secondary text-white px-8 py-4 rounded-xl hover:bg-primary transition text-lg font-semibold shadow-md hover:shadow-lg">
+          Descargar PDF
+        </button>
+      </div>
+    </main>
+  </div>
+
+  <!-- Pie de página -->
+  <footer class="text-gray-700 text-sm text-center flex justify-center items-center gap-2 mt-10">
+    <span>El programó un policía pixelado</span>
+  </footer>
+
+</body>
+</html>
